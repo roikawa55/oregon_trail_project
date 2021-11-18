@@ -16,10 +16,6 @@ DON'T USE A '$'.<p>
 GOOD LUCK!!!
 
 <p>
-HOW MUCH DO YOU WANT TO SPEND ON YOUR OXEN TEAM(200-300)?
-</p>
-<form>
-    <label for="input oxen">Oxen: 
-    <input id="input oxen" type="number">
-    <button type="button" onclick="buyOxen()">BUY</BUTTON>
-</form>
+<div id="choose">
+    <button type="button" onclick="loadIntro(3)">NEXT</button>
+</div>
