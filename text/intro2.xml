@@ -16,5 +16,5 @@
                                 OTHER THINGS YOU WILL NEED FOR SICKNESS<br>
                                 AND EMERGENCY REPAIRS<p>
 <div id="choose">
-    <button type="button" onclick="loadIntro(3)">NEXT</button>
+    <button type="button" onclick="loadFile('intro3.xml')">NEXT</button>
 </div>

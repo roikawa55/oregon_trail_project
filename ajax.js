@@ -1,4 +1,4 @@
-function loadIntro(x){
+function loadFile(filename){
     var xhttp = new XMLHttpRequest()
     console.log("Loading Intro")
     xhttp.onreadystatechange = function(){
@@ -8,6 +8,6 @@ function loadIntro(x){
         }
     }
     
-    xhttp.open("GET", `text/intro${x}.txt`, true)
+    xhttp.open("GET", `text/${filename}`, true)
     xhttp.send();
 }

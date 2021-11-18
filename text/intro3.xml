@@ -17,5 +17,5 @@ GOOD LUCK!!!
 
 <p>
 <div id="choose">
-    <button type="button" onclick="loadIntro(3)">NEXT</button>
+    <button type="button" onclick="loadFile('setup.xml')">NEXT</button>
 </div>
