@@ -1,0 +1,20 @@
+<p>OXEN -   YOU CAN SPEND $200-$300ON YOUR TEAM.
+            THE MORE YOU SPEND, THE FASTER YOU'LL
+            GO BECAUSE YOU'LL HAVE BETTER ANIMALS</p>
+
+<p>FOOD -   THE MORE YOU HAVE, THE LESS CHANCE THERE<br>
+            IS OF GETTING SICK</p>
+
+<p>AMMUNITION -     $1 BUYS A BELT OF 50 BULLETS<br>
+                    YOU WILL NEED BULLETS FFOR ATTACKS BY ANIMALS<br>
+                    AND BANDITS, AND FOR HUNTING FOOD</p>
+
+<p>CLOTHING -   THIS IS ESPECIALLY IMPORTANT FOR THE COLD WEATHER<br>
+                YOU WILL ENCOUNTER WHEN CROSSING THE MOUNTAINS</p>
+
+<p>MISCELLANEOUS SUPPLIES   -   THIS INCLUDES MEDICINE AND <br>
+                                OTHER THINGS YOU WILL NEED FOR SICKNESS<br>
+                                AND EMERGENCY REPAIRS<p>
+<div id="choose">
+    <button type="button" onclick="loadIntro(3)">NEXT</button>
+</div>
