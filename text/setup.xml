@@ -1,12 +1,15 @@
 <form>
     <label for="input oxen">HOW MUCH DO YOU WANT TO SPEND ON YOUR OXEN TEAM(200-300)?</label><br> 
-    <input id="input oxen" type="number">
-    <label for-"input food">HOW MUCH DO YOU WANT TO SPEND ON FOOD?</label>
-    <input id="input food" type="number">
+    <input id="input oxen" type="number"><br>
+    <label for-"input food">HOW MUCH DO YOU WANT TO SPEND ON FOOD?</label><br>
+    <input id="input food" type="number"><br>
     <label for="input ammunition" type="number">HOW MUCH DO YOU WANT TO SPEND ON AMMUNITION?</label><br>
-    <input id="input ammunition" type="number">
+    <input id="input ammunition" type="number"><br>
     <label for="input clothing" type="number">HOW MUCH DO YOU WANT TO SPEND ON CLOTHING?</label><br>
-    <input id="input clothing" type="number">
+    <input id="input clothing" type="number"><br>
     <label for="input clothing" type="number">HOW MUCH DO YOU WANT TO SPEND ON MISCELLANEOUS SUPPLIES?</label><br>
-    <input id="input miscellaneous supplies" type="number">
+    <input id="input miscellaneous supplies" type="number"><br>
 </form>
+<div class="choose" id="setup form submit">
+    <button type="button" onclick="loadFile('setup.xml')">NEXT</button>
+</div>
