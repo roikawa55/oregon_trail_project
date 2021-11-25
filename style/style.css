@@ -1,0 +1,23 @@
+body{
+    background-color: black;
+    color:white;
+    font-size: large;
+    font-family: 'Courier New';
+}
+
+h1{
+    font-weight: bolder;
+}
+
+.btn{
+    background-color: white;
+    border:none;
+    color:black;
+    font-weight: bold;
+}
+
+.btn:hover{
+    background-color:white;
+    color: black;
+    transform: scale(1.05);
+}
