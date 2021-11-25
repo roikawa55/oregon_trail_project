@@ -5,6 +5,12 @@ body{
     font-family: 'Courier New';
 }
 
+.container{
+    width:500px;
+    height:500px;
+    margin: 0 auto;
+}
+
 h1{
     font-weight: bolder;
 }
