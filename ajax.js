@@ -1,3 +1,5 @@
+import player.js
+
 function loadFile(filename){
     var xhttp = new XMLHttpRequest()
     console.log("Loading Intro")
@@ -10,4 +12,8 @@ function loadFile(filename){
     
     xhttp.open("GET", `text/${filename}`, true)
     xhttp.send();
+}
+
+fuction load_setup(){
+
 }
