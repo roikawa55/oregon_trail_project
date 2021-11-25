@@ -1,3 +1,4 @@
+<h1>What Would You Like To Purchase?</h1>
 <form>
     <label for="input oxen">HOW MUCH DO YOU WANT TO SPEND ON YOUR OXEN TEAM(200-300)?</label><br> 
     <input id="input oxen" type="number"><br>
@@ -11,5 +12,5 @@
     <input id="input supplies" type="number"><br>
 </form>
 <div class="choose" id="setup form submit">
-    <button type="button" onclick="load_file('player_status.xml')">NEXT</button>
+    <button class="btn btn-primary btn-lg" type="button" onclick="load_file('player_status.xml')">NEXT</button>
 </div>

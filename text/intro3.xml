@@ -1,3 +1,4 @@
+<h1>Oregon Trail - Spending and Hunting</h1>
 <p>YOU CAN SPEND ALL YOUR MONEY BEFORE YOU START YOUR TRIP - OR YOU CAN SAVE SOME OF YOUR CASH TO SPEND AT FORTS ALONG THE WAY WHEN YOU RUN LOW. HOWEVER, ITEMS COST MORE AT THE FORTS.</p>
 
 <p>YOU CAN ALSO GO HUNTING ALONG THE WAY TO GET MORE FOOD. WHENEVER YOU HAVE TO USE YOUR TRUSTY RIFLE ALONG THE WAY, YOU WILL SEE THE WORDS: 'TYPE BANG'. THE FASTER YOU TYPE IN THE WORD 'BANG' AND HIT 'RETURN' KEY, THE BETTER LUCK YOU'LL HAVE WITH YOUR GUN.<p>
@@ -7,5 +8,5 @@
 <p>GOOD LUCK!!!</p>
 
 <div id="choose">
-    <button type="button" onclick="load_file('setup.xml')">NEXT</button>
+    <button class="btn btn-primary btn-lg" type="button" onclick="load_file('setup.xml')">NEXT</button>
 </div>
