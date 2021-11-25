@@ -6,5 +6,5 @@ IN 5-6 MONTHS --- IF YOU MAKE IT ALIVE.</p>
 JUST PAID $200 FOR A WAGON.
 <p>YOU WILL NEED TO SPEND THE REST OF YOUR MONEY ON THE FOLLOWING ITEMS</p>
 <div id="choose">
-    <button type="button" onclick="loadFile('intro2.xml')">NEXT</button>
+    <button type="button" onclick="load_file('intro2.xml')">NEXT</button>
 </div>

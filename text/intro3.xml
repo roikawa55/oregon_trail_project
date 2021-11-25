@@ -7,5 +7,5 @@
 <p>GOOD LUCK!!!</p>
 
 <div id="choose">
-    <button type="button" onclick="loadFile('setup.xml')">NEXT</button>
+    <button type="button" onclick="load_file('setup.xml')">NEXT</button>
 </div>

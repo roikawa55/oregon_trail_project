@@ -3,13 +3,13 @@
     <input id="input oxen" type="number"><br>
     <label for="input food">HOW MUCH DO YOU WANT TO SPEND ON FOOD?</label><br>
     <input id="input food" type="number"><br>
-    <label for="input ammunition" type="number">HOW MUCH DO YOU WANT TO SPEND ON AMMUNITION?</label><br>
-    <input id="input ammunition" type="number"><br>
-    <label for="input clothing" type="number">HOW MUCH DO YOU WANT TO SPEND ON CLOTHING?</label><br>
-    <input id="input clothing" type="number"><br>
-    <label for="input clothing" type="number">HOW MUCH DO YOU WANT TO SPEND ON MISCELLANEOUS SUPPLIES?</label><br>
-    <input id="input miscellaneous supplies" type="number"><br>
+    <label for="input bullets" type="number">HOW MUCH DO YOU WANT TO SPEND ON AMMUNITION?</label><br>
+    <input id="input bullets" type="number"><br>
+    <label for="input clothes" type="number">HOW MUCH DO YOU WANT TO SPEND ON CLOTHING?</label><br>
+    <input id="input clothes" type="number"><br>
+    <label for="input supplies" type="number">HOW MUCH DO YOU WANT TO SPEND ON MISCELLANEOUS SUPPLIES?</label><br>
+    <input id="input supplies" type="number"><br>
 </form>
 <div class="choose" id="setup form submit">
-    <button type="button" onclick="set_name('MOMO'); console.log(player.name)">NEXT</button>
+    <button type="button" onclick="load_file('player_status.xml')">NEXT</button>
 </div>

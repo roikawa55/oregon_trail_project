@@ -1,0 +1,13 @@
+<p>Total Mileage is: </p>
+<p>Food: </p>
+<p>Bullets:</p>
+<p>Clothing: </p>
+<p>Supplies: </p>
+<p>Cash: </p>
+
+<p>What would you like to do next?</p>
+
+<div id="choose">
+    <button type="button" onclick="load_file('hunt.xml')">Hunt</button>
+    <button type="button" onclick="load_file('continue.xml)"> Continue</button>
+</div>
