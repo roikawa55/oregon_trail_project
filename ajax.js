@@ -5,6 +5,7 @@ function load_file(filename){
         
         if (this.readyState == 4 && this.status == 200){
             document.getElementById("gameWindow").innerHTML = this.responseText
+            fadein_paragraphs()
         }
     }
     
@@ -21,6 +22,6 @@ function load_setup(){
 
     stock_ammo(bullets)
     stock_food(food)
-
+    
     console.log(player)
 }

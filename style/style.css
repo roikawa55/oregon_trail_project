@@ -29,26 +29,15 @@ h1 {
 }
 
 #gameWindow p {
-  width: 0;
-  color: white;
-  white-space: nowrap;
-  overflow: hidden;
-  animation: typewriter 1.5s steps(60, end) forwards;
+  animation: fade-in 1s linear;
+  animation-fill-mode: both;
 }
 
-span {
-  animation: blink is infinite;
-}
-
-@keyframes typewriter {
+@keyframes fade-in {
   0% {
-    width: 0;
+    opacity: 0;
   }
   100% {
-    width: 100%;
+    opacity: 1;
   }
-}
-
-::selection {
-  background: black;
 }
