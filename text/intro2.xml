@@ -1,28 +1,30 @@
-<h1>Oregon Trail - Items</h1>
-<p>
-    <b>OXEN</b> - YOU CAN SPEND $200-$300ON YOUR TEAM. 
-    THE MORE YOU SPEND, THE FASTER YOU'LL GO BECAUSE 
-    YOU'LL HAVE BETTER ANIMALS
-</p>
-<p>
-    <b>FOOD</b> - THE MORE YOU HAVE, THE LESS CHANCE 
-    THERE IS OF GETTING SICK
-</p>
-<p>
-    <b>AMMUNITION</b> - $1 BUYS A BELT OF 50 BULLETS 
-    YOU WILL NEED BULLETS FOR ATTACKS BY ANIMALS AND 
-    BANDITS, AND FOR HUNTING FOOD
-</p>
-<p>
-    <b>CLOTHING</b> - THIS IS ESPECIALLY IMPORTANT 
-    FOR THE COLD WEATHER YOU WILL ENCOUNTER WHEN 
-    CROSSING THE MOUNTAINS
-</p>
-<p>
-    <b>MISCELLANEOUS SUPPLIES</b> - THIS INCLUDES 
-    MEDICINE AND OTHER THINGS YOU WILL NEED FOR 
-    SICKNESS AND EMERGENCY REPAIRS
-<p>
-<div id="choose">
-    <button class="btn btn-primary btn-lg" type="button" onclick="load_file('intro3.xml')">NEXT</button>
+<div class="container" id="gameWindow">
+    <h1>Oregon Trail - Items</h1>
+    <p>
+        <b>OXEN</b> - YOU CAN SPEND $200-$300ON YOUR TEAM. 
+        THE MORE YOU SPEND, THE FASTER YOU'LL GO BECAUSE 
+        YOU'LL HAVE BETTER ANIMALS
+    </p>
+    <p>
+        <b>FOOD</b> - THE MORE YOU HAVE, THE LESS CHANCE 
+        THERE IS OF GETTING SICK
+    </p>
+    <p>
+        <b>AMMUNITION</b> - $1 BUYS A BELT OF 50 BULLETS 
+        YOU WILL NEED BULLETS FOR ATTACKS BY ANIMALS AND 
+        BANDITS, AND FOR HUNTING FOOD
+    </p>
+    <p>
+        <b>CLOTHING</b> - THIS IS ESPECIALLY IMPORTANT 
+        FOR THE COLD WEATHER YOU WILL ENCOUNTER WHEN 
+        CROSSING THE MOUNTAINS
+    </p>
+    <p>
+        <b>MISCELLANEOUS SUPPLIES</b> - THIS INCLUDES 
+        MEDICINE AND OTHER THINGS YOU WILL NEED FOR 
+        SICKNESS AND EMERGENCY REPAIRS
+    <p>
+    <div id="choose">
+        <button class="btn btn-primary btn-lg" type="button" onclick="load_file('intro3.xml')">NEXT</button>
+    </div>
 </div>

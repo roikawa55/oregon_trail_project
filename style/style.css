@@ -1,29 +1,54 @@
-body{
-    background-color: black;
-    color:white;
-    font-size: large;
-    font-family: 'Courier New';
+body {
+  background-color: black;
+  color: white;
+  font-size: large;
+  font-family: "Courier New";
 }
 
-.container{
-    width:500px;
-    height:500px;
-    margin: 0 auto;
+.container {
+  width: 500px;
+  height: 500px;
+  margin: 0 auto;
 }
 
-h1{
-    font-weight: bolder;
+h1 {
+  font-weight: bolder;
 }
 
-.btn{
-    background-color: white;
-    border:none;
-    color:black;
-    font-weight: bold;
+.btn {
+  background-color: white;
+  border: none;
+  color: black;
+  font-weight: bold;
 }
 
-.btn:hover{
-    background-color:white;
-    color: black;
-    transform: scale(1.05);
+.btn:hover {
+  background-color: white;
+  color: black;
+  transform: scale(1.05);
+}
+
+#gameWindow p {
+  width: 0;
+  color: white;
+  white-space: nowrap;
+  overflow: hidden;
+  animation: typewriter 1.5s steps(60, end) forwards;
+}
+
+span {
+  animation: blink is infinite;
+}
+
+@keyframes typewriter {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+::selection {
+  background: black;
 }
