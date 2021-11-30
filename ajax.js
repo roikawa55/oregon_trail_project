@@ -10,6 +10,7 @@ function load_file(filename){
     }
     
     xhttp.open("GET", `text/${filename}`, true)
+    xhttp.setRequestHeader( 'Access-Control-Allow-Origin', '*')
     xhttp.send();
 }
 
