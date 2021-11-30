@@ -1,17 +1,16 @@
-class player{    
+export class player{    
     #name = 'undefined'
     #oxen = 0
-    #rifle_skill = 0
-    #supplies = {food: 0, bullets: 0, clothes: 0}
-    #health= {hurt: false, sick: false}
+    #rifle_skill = 1
+    #supplies = {food: 0, bullets: 0, clothes: 0, miscellaneous: 0}
+    #health= {hurt: "", sick: ""}
     #cash = 700
     
     //#attribute_types = {name_type: 'string'};
 
-    constructor(name, oxen, rifle_skill, food, bullets, clothes){
+    constructor(name, oxen, food, bullets, clothes, miscellaneous){
         this.set_name(name)
         this.stock_oxen(oxen)
-        this.set_rifle_skill(rifle_skill)
         this.stock_food(food)
         this.stock_bullets(bullets)
         this.add_clothes(clothes)
@@ -141,8 +140,53 @@ class player{
         }
     }
 
+    stock_miscellaneous(amount){
+        if(typeof(amount) == 'number') {
+            this.#supplies.miscellaneous += amount
+        }
+        else{
+            throw new input_type_mismatch_exception('number', typeof amount)
+        }
+    }
+
+    consume_miscellaneous(amount) {
+        if(this.#supplies.miscellaneous == 0){
+            console.log('No miscellaneous supplies left')
+        }
+        else if(typeof(amount) == 'number') {
+            this.#supplies.miscellaneous -= amount
+        }
+        else{
+            throw new input_type_mismatch_exception('number', typeof amount)
+        }
+    }
+
     stock_by_attribute(attribute, amount){
-    
+        if(typeof(attribute) != 'string')
+            throw new input_type_mismatch_exception('number', typeof amount)
+
+        if(typeof(amount) != 'number')
+            throw new input_type_mismatch_exception('number', typeof amount)
+            
+        switch (attribute) {
+            case 'oxen':
+                this.#oxen += amount
+                break;
+            case 'food':
+                this.#supplies.food += amount
+                break;
+            case 'bullets':
+                this.#supplies.bullets += amount
+                break;
+            case 'clothes':
+                this.#supplies.clothes += amount
+                break;
+            case 'miscellaneous':
+                this.#supplies.miscellaneous += amount
+                break;
+            default:
+                break;
+        }
     }
 
     consume_by_attribute(attribute, amount){
@@ -150,8 +194,8 @@ class player{
     }
     
     change_health_condition(category, condition){
-        if(typeof(category) != 'string' || typeof(condition) != 'boolean'){
-            throw new input_type_mismatch_exception('boolean', typeof condition)
+        if(typeof(category) != 'string' || typeof(condition) != 'string'){
+            throw new input_type_mismatch_exception('string', typeof condition)
         }
         else if(category == 'hurt'){
             this.#health.hurt = condition
