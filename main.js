@@ -1,7 +1,5 @@
 function fadein_paragraphs(){
-    let game_window = document.getElementById("gameWindow")
-    let p_element_object = game_window.getElementsByTagName('p')
-    let p_element_array = Array.from(p_element_object)
+    let p_element_array = Array.from(document.getElementById("gameWindow").getElementsByTagName('p'))
 
     p_element_array.forEach((p,i) =>{
         p.style.animationDelay= `${i}s`
