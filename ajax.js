@@ -1,19 +1,22 @@
-function load_file(filename){
-    var xhttp = new XMLHttpRequest()
-    console.log("Loading Intro")
-    xhttp.onreadystatechange = function(){
+// function load_file(filename){
+//     var xhttp = new XMLHttpRequest()
+//     console.log("Loading Intro")
+//     xhttp.onreadystatechange = function(){
         
-        if (this.readyState == 4 && this.status == 200){
-            document.getElementById("gameWindow").innerHTML = this.responseText
-            fadein_paragraphs()
-        }
-    }
+//         if (this.readyState == 4 && this.status == 200){
+//             document.getElementById("gameWindow").innerHTML = this.responseText
+//             fadein_paragraphs()
+//         }
+//     }
     
-    xhttp.open("GET", `./text/${filename}`, true)
-    xhttp.setRequestHeader( 'Access-Control-Allow-Origin', '*')
-    xhttp.send();
-}
+//     xhttp.open("GET", `./text/${filename}`, true)
+//     xhttp.setRequestHeader( 'Access-Control-Allow-Origin', '*')
+//     xhttp.send();
+// }
 
+function load_file(filename){
+    const gameWindow = document.getElem
+}
 function load_setup(){
     let oxen = parseInt(document.getElementById("input oxen").value)
     let food = parseInt(document.getElementById("input food").value)
