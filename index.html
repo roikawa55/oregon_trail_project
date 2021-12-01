@@ -13,12 +13,16 @@
     <title>Oregon Trail</title>
 </head>
 <body>
-    <div class="container" id="gameWindow"> 
-        <p><h1>Oregon Trail</h1></p>
-        <p>Do you need instructions?</p>
-        <div>
-            <button class="btn btn-primary btn-lg" type="button" onclick="load_file('intro1.xml')">Yes</button>
-            <button class="btn btn-primary btn-lg" type="button" onclick="load_file('setup.xml')">No</button>
+    <div class="container" id="gameWindow">
+        <div id="gameWindowItems"> 
+            <p><h1>Oregon Trail</h1></p>
+            <img src="images/oregon-trail-gab9ddd1a1_1920.jpg" alt="Scenic view of carriages on lanscape"></img>
+            <p>Do you need instructions?</p>
+
+            <div class="what to do next menu">
+                <button class="btn btn-primary btn-lg" type="button" onclick="load_file('intro1.xml')">Yes</button>
+                <button class="btn btn-primary btn-lg" type="button" onclick="load_file('setup.xml')">No</button>
+            </div>
         </div>
     </div>
 </body>

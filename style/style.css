@@ -3,12 +3,19 @@ body {
   color: white;
   font-size: large;
   font-family: "Courier New";
+  margin-top:10px;
 }
 
 .container {
-  width: 500px;
-  height: 500px;
-  margin: 0 auto;
+  width: 50%;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+img{
+  filter: grayscale();
+  margin: 0 0 20px 0;
 }
 
 h1 {
@@ -29,6 +36,19 @@ h1 {
   transform: scale(1.05);
 }
 
+#gameWindow form {
+    padding-top: 20px;
+}
+
+#gameWindow form div{
+    padding-bottom: 10px;
+}
+
+#gameWindowItems{
+  display:flex;
+  flex-direction:column;
+  justify-content: center;
+}
 #gameWindow p {
   animation: fade-in 1s linear;
   animation-fill-mode: both;
