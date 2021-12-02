@@ -25,3 +25,14 @@ export class money_shortage extends Exception {
         this.name = "money_shortage"
     }
 }
+
+export class oxen_shortage extends Exception {
+    constructor(oxen){
+        super("No oxen left")
+        this.name = "oxen_shortage"
+    }
+}
+
+export class food_shortage extends Exception {
+    
+}
