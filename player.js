@@ -1,4 +1,10 @@
-export class player{    
+import { input_type_mismatch_exception, 
+         health_category_not_found_exception,
+         money_shortage
+        } from "./exception.js"
+
+
+class player{    
     #name = 'undefined'
     #oxen = 0
     #rifle_skill = 1
@@ -6,54 +12,48 @@ export class player{
     #health= {hurt: "", sick: ""}
     #cash = 700
     
-    //#attribute_types = {name_type: 'string'};
 
     constructor(name, oxen, food, bullets, clothes, miscellaneous){
         this.set_name(name)
         this.stock_oxen(oxen)
         this.stock_food(food)
         this.stock_bullets(bullets)
-        this.add_clothes(clothes)
-        this.debit(this.#name + this.#oxen + this.#supplies.food + this.#supplies.bullets + this.#supplies.clothes)
-    }
-    
-    input_type_mismatch_exception(required, actual){
-        console.log("Required type is: " + required + " and actual type is: " + actual)
+        this.stock_clothes(clothes)
+        this.stock_miscellaneous(miscellaneous)
+        this.debit(this.#name + this.#oxen + this.#supplies.food 
+            + this.#supplies.bullets + this.#supplies.clothes + this.#supplies.miscellaneous)
     }
 
-    health_category_not_found_exception(category){
-        console.log("Health category " + category + " does not match either hurt or sick")
-    }
-     
     check_type_match(arg, required){
-        if(typeof(required) != "string"){
-            throw new input_type_mismatch_exception('string', typeof required)
-        }
         if(typeof(arg) != required)
             throw new input_type_mismatch_exception(required, typeof arg)
     }
 
+    load_player_from_object(info_obj){
+        this.set_name(info_obj.name)
+        this.stock_oxen(info_obj.oxen)
+        this.stock_food(info_obj.food)
+        this.stock_bullets(info_obj.bullets)
+        this.stock_clothes(info_obj.clothes)
+        this.stock_miscellaneous(info_obj.miscellaneous)
+        this.debit(this.#name + this.#oxen + this.#supplies.food 
+            + this.#supplies.bullets + this.#supplies.clothes + this.#supplies.miscellaneous)
+    }
+
+
     set_name(new_name){
-        if(typeof(new_name) == "string"){
-            this.#name = new_name
-        }
-        else {
-            throw new input_type_mismatch_exception(typeof String, typeof new_name)
-        }
+        this.check_type_match(new_name, "string")
+        this.#name = new_name
     }
 
     stock_oxen(oxen){
-        check_type_match(oxen, "number")
+        this.check_type_match(oxen, "number")
         this.#oxen += oxen
     }
 
     lose_oxen(oxen){
-        if(typeof(oxen) == 'number') {
-            this.#oxen -= oxen
-        }
-        else{
-            throw new input_type_mismatch_exception('number', typeof oxen)
-        }
+        this.check_type_match(oxen, "number")
+        this.#oxen -= oxen
     }
 
     set_rifle_skill(new_rifle_skill){
@@ -66,99 +66,65 @@ export class player{
     }
     
     debit(money) {
-        if(this.#cash == 0){
+        if(this.#cash <= 0){
             console.log('No money left')
+            //throw new exception
         }
-        else if(typeof(money) == 'number') {
-            this.#cash -= money
-        }
-        else{
-            throw new input_type_mismatch_exception('number', typeof money)
-        }
+        this.check_type_match(money, "number")
+        this.#cash -= money
+        
     }
     
     stock_food(amount) {
-        if(typeof(amount) == 'number') {
-            this.#supplies.food += amount
-        }
-        else{
-            throw new input_type_mismatch_exception('number', typeof amount)
-        }
+        this.check_type_match(amount, "number")
+        this.#supplies.food += amount
     }
     
     consume_food(amount) {
         if(this.#supplies.food == 0){
             console.log('No food left')
         }
-        else if(typeof(amount) == 'number') {
-            this.#supplies.food -= amount
-        }
-        else{
-            throw new input_type_mismatch_exception('number', typeof amount)
-        }
+        this.check_type_match(amount, "number")
+        this.#supplies.food -= amount
     }
     
     stock_bullets(amount) {
-        if(typeof(amount) == 'number') {
-            this.#supplies.bullets += amount
-        }
-        else{
-            throw new input_type_mismatch_exception('number', typeof amount)
-        }
+        this.check_type_match(amount, "number")
+        this.#supplies.bullets += amount
     }
     
     consume_bullets(amount) {
         if(this.#supplies.bullets == 0){
             console.log('No ammos left')
         }
-        else if(typeof(amount) == 'number') {
-            this.#supplies.bullets -= amount
-        }
-        else{
-            throw new input_type_mismatch_exception('number', typeof amount)
-        }
+        this.check_type_match(amount, "number")
+        this.#supplies.bullets -= amount
     }
     
-    add_clothes(pair) {
-        if(typeof(pair) == 'number') {
-            this.#supplies.clothes += pair
-        }
-        else{
-            throw new input_type_mismatch_exception('number', typeof pair)
-        }
+    stock_clothes(pair) {
+        this.check_type_match(pair, "number")
+        this.#supplies.clothes += pair
     }
     
-    remove_clothes(pair) {
+    consume_clothes(pair) {
         if(this.#supplies.clothes == 0){
             console.log('No clothes left')
         }
-        else if(typeof(pair) == 'number') {
-            this.#supplies.clothes -= pair
-        }
-        else{
-            throw new input_type_mismatch_exception('number', typeof pair)
-        }
+        this.check_type_match(pair, "number")
+        this.#supplies.clothes -= pair
     }
 
     stock_miscellaneous(amount){
-        if(typeof(amount) == 'number') {
-            this.#supplies.miscellaneous += amount
-        }
-        else{
-            throw new input_type_mismatch_exception('number', typeof amount)
-        }
+        this.check_type_match(amount, "number")
+        this.#supplies.miscellaneous += amount
     }
 
     consume_miscellaneous(amount) {
         if(this.#supplies.miscellaneous == 0){
-            console.log('No miscellaneous supplies left')
+            console.log('No clothes left')
         }
-        else if(typeof(amount) == 'number') {
-            this.#supplies.miscellaneous -= amount
-        }
-        else{
-            throw new input_type_mismatch_exception('number', typeof amount)
-        }
+        this.check_type_match(amount, 'number')
+        this.#supplies.miscellaneous -= amount
     }
 
     stock_by_attribute(attribute, amount){
@@ -195,7 +161,7 @@ export class player{
     
     change_health_condition(category, condition){
         if(typeof(category) != 'string' || typeof(condition) != 'string'){
-            throw new input_type_mismatch_exception('string', typeof condition)
+            throw new input_type_mismatch_exception("string", typeof condition)
         }
         else if(category == 'hurt'){
             this.#health.hurt = condition
@@ -204,7 +170,22 @@ export class player{
             this.#health.sick = condition
         }
         else{
+            console.log('category is: ' + category)
             throw new health_category_not_found_exception(category)
         }
     }
+
+    have_enough_clothes(minimum){
+        return this.#supplies.clothes > minimum
+    }
+}
+
+var user = new player("user", 100,100,100,100,100)
+try{
+    user.change_health_condition("injure", "snack bite")
+
+}
+catch(err){
+        console.log(err.message)
+        console.log(err.name)
 }
