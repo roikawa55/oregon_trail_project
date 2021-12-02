@@ -22,8 +22,8 @@ function load_setup(){
     let clothes = parseInt(document.getElementById("input clothes").value)
     let supplies = parseInt(document.getElementById("input supplies").value)
 
-    let player1 = new player(name, oxen, food, bullets, clothes, supplies)
-    
-    
-    console.log(player1)
+    const player1 = {name: name, oxen: oxen, food: food, bullets: bullets, clothes: clothes, supplies: supplies}
+    load_player_from_object(player1)
+    set_name(name)
+    console.log(player)
 }
