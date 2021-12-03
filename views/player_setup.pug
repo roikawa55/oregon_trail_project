@@ -1,0 +1,31 @@
+extends layout 
+
+block content 
+    h2 What Would You Like To Purchase?
+    form(action="")
+        div
+          label(for="input-name") NAME:  
+              input(type="text" name="input-name" id="input-name")
+
+        div
+          label(for="input-oxen") OXEN TEAM: 
+              input(type="text" name="input-oxen" id="input-oxen")
+
+        div
+          label(for="input-name") FOOD:  
+              input(type="text" name="input-food" id="input-food")
+
+        div
+          label(for="input-oxen") BULLETS: 
+              input(type="text" name="input-bullets" id="input-bullets")
+
+        div
+          label(for="input-name") CLOTHES:  
+              input(type="text" name="input-clothes" id="input-clothes")
+              
+        div
+          label(for="input-oxen") SUPPLIES: 
+              input(type="text" name="input-supplies" id="input-supplies")
+    div 
+        button BEGIN 
+        button RESET
