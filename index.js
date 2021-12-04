@@ -2,6 +2,11 @@ const express = require('express')
 const app = express()
 const port = process.env.PORT || 3000
 
+if (typeof localStorage === "undefined" || localStorage === null) {
+    var LocalStorage = require('node-localstorage').LocalStorage;
+    localStorage = new LocalStorage('./scratch');
+}
+
 const home_router = require('./routes/home')
 app.use('/', home_router)
 

@@ -1,11 +1,18 @@
 extends layout 
 
 block content 
+    printLocalStorage()
+    console.log(localStorage.getItem('myFirstKey'));
+    //- var last = window.localStorage.getItem("lastname")
+    //- var temp_storage_item = localStorage.getItem('player_status')
+    //- var player = JSON.parse(temp_storage_item) 
+    - var temp = "variable testing"
     h2 Player Status 
-    p Name: #{player}
+    p Name: #{temp}
     p Miles TRAVELED: 
     p Oxen: 
     p FOOD: 
     p AMMO:
     p CLOTHES:  
     p SUPPLIES: 
+

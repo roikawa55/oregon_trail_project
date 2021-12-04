@@ -41,4 +41,12 @@ block content
           const player1 = {name: name, oxen: oxen, food: food, bullets: bullets, clothes: clothes, supplies: supplies}
           load_player_from_object(player1)
           console.log(player)
+          /*
+          localStorage.setItem('player_status', JSON.stringify(player1))
+          localStorage.setItem("lastname", "oikawa")
+          */
+          
+
+          localStorage.setItem('myFirstKey', 'myFirstValue');
+          console.log(localStorage.getItem('myFirstKey'));
         }

@@ -4,7 +4,8 @@ var player = {
     rifle_skill: 1,
     supplies: { food: 0, bullets: 0, clothes: 0, miscellaneous: 0 },
     health: { hurt: "", sick: "" },
-    cash: 700
+    cash: 700,
+    total_mileage: 0
 }
 
 function check_type_match(arg, required) {
@@ -132,13 +133,3 @@ function change_health_condition(category, condition) {
         throw new health_category_not_found_exception(category)
     }
 }
-
-function get_cash_amount() {
-    console.log("player currently has $" + player.cash)
-    return player.cash
-}
-
-
-console.log(player)
-stock_by_attribute("oxen", 100)
-get_cash_amount()
