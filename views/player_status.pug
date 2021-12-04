@@ -1,20 +1,13 @@
 extends layout 
 
 block content 
-    //script. 
-        let user = get_item('player_status')
-        console.log(user)
-    //console.log(localStorage.getItem('myFirstKey'));
-    //- var last = window.localStorage.getItem("lastname")
-    //- var temp_storage_item = localStorage.getItem('player_status')
-    //- var player = get_item('player_status')
-    //- var temp = "variable testing"
-    h2 Player Status 
-    p Name: #{status.name}
-    p Miles TRAVELED: 
-    p Oxen: 
-    p FOOD: 
-    p AMMO:
-    p CLOTHES:  
-    p SUPPLIES: 
+    h2 !{player_input.input_name}'s Status 
+    p #[b Miles TRAVELED:] 
+    p #[b Oxen:] !{player_input.input_oxen}
+    p #[b FOOD:] !{player_input.input_food}
+    p #[b BULLETS:] !{player_input.input_bullets}
+    p #[b CLOTHES:]  !{player_input.input_clothes}
+    p #[b SUPPLIES:] !{player_input.input_supplies}
+    div 
+        button NEXT
 

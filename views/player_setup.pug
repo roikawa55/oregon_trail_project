@@ -2,64 +2,30 @@ extends layout
 
 block content 
     h2 What Would You Like To Purchase?
-    form(action="")
+    form(method='POST' action="/player_setup")
         div
-          label(for="input-name") NAME:  
-              input(type="text" name="input-name" id="input-name")
+          label(for="input_name") NAME:  
+              input(type="text" name="input_name" id="input_name")
 
         div
-          label(for="input-oxen") OXEN TEAM: 
-              input(type="text" name="input-oxen" id="input-oxen")
+          label(for="input_oxen") OXEN TEAM: 
+              input(type="number" name="input_oxen" id="input_oxen")
 
         div
-          label(for="input-name") FOOD:  
-              input(type="text" name="input-food" id="input-food")
+          label(for="input_food") FOOD:  
+              input(type="number" name="input_food" id="input_food")
 
         div
-          label(for="input-oxen") BULLETS: 
-              input(type="text" name="input-bullets" id="input-bullets")
+          label(for="input_bullets") BULLETS: 
+              input(type="number" name="input_bullets" id="input_bullets")
 
         div
-          label(for="input-name") CLOTHES:  
-              input(type="text" name="input-clothes" id="input-clothes")
+          label(for="input-clothes") CLOTHES:  
+              input(type="number" name="input_clothes" id="input_clothes")
               
         div
-          label(for="input-oxen") SUPPLIES: 
-              input(type="text" name="input-supplies" id="input-supplies")
-    div 
-        button(onclick="create_player_object(); move_to('player_status')") BEGIN 
-        button RESET
-    script.
-        function create_player_object(){
-          let name = document.getElementById("input-name").value
-          let oxen = parseInt(document.getElementById("input-oxen").value)
-          let food = parseInt(document.getElementById("input-food").value)
-          let bullets = parseInt(document.getElementById("input-bullets").value)
-          let clothes = parseInt(document.getElementById("input-clothes").value)
-          let supplies = parseInt(document.getElementById("input-supplies").value)
-
-          const player1 = {name: name, oxen: oxen, food: food, bullets: bullets, clothes: clothes, supplies: supplies}
-          load_player_from_object(player1)
-          console.log(player)
-          /*
-          localStorage.setItem('player_status', JSON.stringify(player1))
-          localStorage.setItem("lastname", "oikawa")
-          localStorage.setItem('myFirstKey', 'myFirstValue');
-          console.log(localStorage.getItem('myFirstKey'));
-          */
-          set_item('player_status', player1)
-
-          /*
-          const content = 'Some content!'
-
-          fs.writeFile('/Users/roikawa/test.txt', content, err => {
-            if (err) {
-              console.error(err)
-              return
-            }
-            //file written successfully
-          })
-          */
-
-
-        }
+          label(for="input_supplies") SUPPLIES: 
+              input(type="number" name="input_supplies" id="input_supplies")
+        div 
+            button(type="submit") BEGIN 
+            button(type="reset") RESET
