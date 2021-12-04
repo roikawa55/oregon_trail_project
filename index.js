@@ -17,6 +17,9 @@ app.use('/instructions_3', instructions_3)
 const player_setup = require('./routes/player_setup')
 app.use('/player_setup', player_setup)
 
+const player_status = require('./routes/player_status')
+app.use('/player_status', player_status)
+
 const path = require('path')
 app.use(express.static('public'))
 // app.set('views', path.join(__dirname, '/views'))
