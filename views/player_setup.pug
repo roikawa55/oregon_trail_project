@@ -44,9 +44,22 @@ block content
           /*
           localStorage.setItem('player_status', JSON.stringify(player1))
           localStorage.setItem("lastname", "oikawa")
-          */
-          
-
           localStorage.setItem('myFirstKey', 'myFirstValue');
           console.log(localStorage.getItem('myFirstKey'));
+          */
+          set_item('player_status', player1)
+
+          /*
+          const content = 'Some content!'
+
+          fs.writeFile('/Users/roikawa/test.txt', content, err => {
+            if (err) {
+              console.error(err)
+              return
+            }
+            //file written successfully
+          })
+          */
+
+
         }
