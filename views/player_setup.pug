@@ -26,6 +26,13 @@ block content
         div
           label(for="input_supplies") SUPPLIES: 
               input(type="number" name="input_supplies" id="input_supplies")
+
+        div
+          label(for="input_meal_plan") MEAL PLAN: 
+              select(name="meal_plans" id="meal_plans")
+                option(value="MINIMAL") MINIMAL
+                option(value="MODERATE") MODERATE
+                option(value="WELL") WELL  
         div 
             button(type="submit") BEGIN 
             button(type="reset") RESET
