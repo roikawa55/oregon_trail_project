@@ -3,6 +3,7 @@ const bodyParser = require('body-parser')
 const app = express()
 const port = process.env.PORT || 3000
 const path = require('path')
+const date = require('./public/javascript/date.js')
 
 app.use(express.static('public'))
 app.set('view engine', 'pug')
@@ -27,7 +28,7 @@ app.post('/player_setup', (req, res) => {
     console.log('name' + JSON.stringify(req.body))
     let player_input = req.body 
     console.log(player_input)
-    res.render('player_status', { player_input })
+    res.render('player_status', { player_input, date })
 })
 
 app.listen(port, () => {

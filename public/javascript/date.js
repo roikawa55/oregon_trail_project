@@ -19,3 +19,6 @@ function date_to_string(){
 function check_for_long_trail(){
     return current_date_index >= month_date_options.length
 }
+
+module.exports.date_to_string = date_to_string
+module.exports.check_for_long_trail = check_for_long_trail
