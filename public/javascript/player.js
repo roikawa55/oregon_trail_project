@@ -2,7 +2,7 @@ var player = {
     name: 'undefined',
     oxen: 0,
     rifle_skill: 1,
-    meal_plan: 1,
+    meal_plan: "MODERATE",
     supplies: { food: 0, bullets: 0, clothes: 0, miscellaneous: 0 },
     health: { hurt: "", sick: "" },
     cash: 700,
