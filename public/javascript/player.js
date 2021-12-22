@@ -41,14 +41,13 @@ function set_rifle_skill(new_rifle_skill) {
 function debit(money) {
     if (player.cash - money <= 0) {
         console.log('Not enough money left')
-        throw new money_shortage(player.cash)
     }
     player.cash -= money
 }
 
 function consume_food(amount) {
     if (player.supplies.food - amount <= 0) {
-        throw new food_shortage(player.supplies.food)
+        console.log("Not enough food left")
     }
     player.supplies.food -= amount
 }
@@ -56,22 +55,20 @@ function consume_food(amount) {
 function consume_bullets(amount) {
     if (player.supplies.bullets - amount<= 0) {
         console.log('Not enough bullets left')
-        throw new bullets_shortage(player.supplies.bullets)
     }
     player.supplies.bullets -= amount
 }
 
 function consume_clothes(pair) {
     if (player.supplies.clothes - pair <= 0) {
-        throw new clothes_shortage(player.supplies.clothes)
+        console.log("Not enough clothes left")
     }
     player.supplies.clothes -= pair
 }
 
 function consume_miscellaneous(amount) {
     if (player.supplies.miscellaneous - amount <= 0) {
-        console.log('No clothes left')
-        throw new miscellaneous_shortage(player.supplies.miscellaneous)
+        console.log("Not enough miscellaneous supplies left")
     }
     player.supplies.miscellaneous -= amount
 }
