@@ -4,32 +4,32 @@ block content
     h2 What Would You Like To Purchase?
     form(method='POST' action="/player_setup")
         div
-          label(for="input_name") NAME:  
-              input(type="text" name="input_name" id="input_name")
+          label(for="name") NAME:  
+              input(type="text" name="name" id="iname")
 
         div
-          label(for="input_oxen") OXEN TEAM: 
-              input(type="number" name="input_oxen" id="input_oxen")
+          label(for="oxen") OXEN TEAM: 
+              input(type="number" name="oxen" id="oxen")
 
         div
-          label(for="input_food") FOOD:  
-              input(type="number" name="input_food" id="input_food")
+          label(for="food") FOOD:  
+              input(type="number" name="food" id="food")
 
         div
-          label(for="input_bullets") BULLETS: 
-              input(type="number" name="input_bullets" id="input_bullets")
+          label(for="bullets") BULLETS: 
+              input(type="number" name="bullets" id="bullets")
 
         div
-          label(for="input-clothes") CLOTHES:  
-              input(type="number" name="input_clothes" id="input_clothes")
+          label(for="clothes") CLOTHES:  
+              input(type="number" name="clothes" id="clothes")
               
         div
-          label(for="input_supplies") SUPPLIES: 
-              input(type="number" name="input_supplies" id="input_supplies")
+          label(for="miscellaneous") SUPPLIES: 
+              input(type="miscellaneous" name="miscellaneous" id="miscellaneous")
 
         div
-          label(for="input_meal_plan") MEAL PLAN: 
-              select(name="meal_plans" id="meal_plans")
+          label(for="meal_plan") MEAL PLAN: 
+              select(name="meal_plan" id="meal_plan")
                 option(value="MINIMAL") MINIMAL
                 option(value="MODERATE") MODERATE
                 option(value="WELL") WELL  

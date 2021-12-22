@@ -1,13 +1,14 @@
 extends layout 
 
 block content 
-    h2 !{player_input.input_name}'s Status 
-    p #[b Miles TRAVELED:] 
-    p #[b Oxen:] !{player_input.input_oxen}
-    p #[b FOOD:] !{player_input.input_food}
-    p #[b BULLETS:] !{player_input.input_bullets}
-    p #[b CLOTHES:]  !{player_input.input_clothes}
-    p #[b SUPPLIES:] !{player_input.input_supplies}
+    h2 !{the_player.name}'s Status 
+    p #[b Miles TRAVELED: !{the_player.total_mileage}] 
+    p #[b Oxen:] !{the_player.oxen}
+    p #[b FOOD:] !{the_player.supplies.food}
+    p #[b BULLETS:] !{the_player.supplies.bullets}
+    p #[b CLOTHES:]  !{the_player.supplies.clothes}
+    p #[b SUPPLIES:] !{the_player.supplies.miscellaneous}
+    p #[b CASH:] !{the_player.cash}
     p #[b DATE:] !{date.date_to_string()}
     div 
         button HUNT

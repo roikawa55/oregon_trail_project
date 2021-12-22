@@ -133,3 +133,6 @@ function change_health_condition(category, condition) {
         throw new health_category_not_found_exception(category)
     }
 }
+
+module.exports.player = player
+module.exports.load_player_from_object = load_player_from_object
