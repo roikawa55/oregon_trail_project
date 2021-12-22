@@ -20,8 +20,10 @@ function load_player_from_object(info_obj) {
     player.supplies.bullets = info_obj.bullets
     player.supplies.clothes = info_obj.clothes
     player.supplies.miscellaneous = info_obj.miscellaneous
-    player.cash = info_obj.cash
-    player.rifle_skill = info_obj.rifle_skill
+    //player.cash = info_obj.cash
+    debit(player.oxen + player.supplies.food + player.supplies.bullets 
+        + player.supplies.clothes + player.supplies.miscellaneous)
+    //player.rifle_skill = info_obj.rifle_skill
 }
 
 function set_name(new_name) {
@@ -132,4 +134,12 @@ function change_health_condition(category, condition) {
         console.log('category is: ' + category)
         throw new health_category_not_found_exception(category)
     }
+}
+
+function reduce_total_mileage(lost_mileage){
+    player.total_mileage -= lost_mileage
+}
+
+function add_total_mileage(mileage){
+    player.total_mileage += mileage
 }
