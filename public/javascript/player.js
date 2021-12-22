@@ -1,4 +1,3 @@
-import input_type_mismatch_exception from 'exception.js'
 var player = {
     name: 'undefined',
     oxen: 0,
@@ -7,11 +6,6 @@ var player = {
     health: { hurt: "", sick: "" },
     cash: 700,
     total_mileage: 0
-}
-
-function check_type_match(arg, required) {
-    if (typeof (arg) != required)
-        throw new input_type_mismatch_exception(required, typeof arg)
 }
 
 function load_player_from_object(info_obj) {
@@ -28,12 +22,10 @@ function load_player_from_object(info_obj) {
 }
 
 function set_name(new_name) {
-    check_type_match(new_name, "string")
     player.name = new_name
 }
 
 function lose_oxen(oxen) {
-    check_type_match(oxen, "number")
     if (player.oxen - oxen <= 0) {
         throw new oxen_shortage(player.oxen)
     }
@@ -44,13 +36,9 @@ function set_rifle_skill(new_rifle_skill) {
     if (Number.isInteger(new_rifle_skill)) {
         player.rifle_skill = new_rifle_skill
     }
-    else {
-        throw new input_type_mismatch_exception('integer', typeof new_rifle_skill)
-    }
 }
 
 function debit(money) {
-    check_type_match(money, "number")
     if (player.cash - money <= 0) {
         console.log('Not enough money left')
         throw new money_shortage(player.cash)
@@ -59,7 +47,6 @@ function debit(money) {
 }
 
 function consume_food(amount) {
-    check_type_match(amount, "number")
     if (player.supplies.food - amount <= 0) {
         throw new food_shortage(player.supplies.food)
     }
@@ -67,7 +54,6 @@ function consume_food(amount) {
 }
 
 function consume_bullets(amount) {
-    check_type_match(amount, "number")
     if (player.supplies.bullets - amount<= 0) {
         console.log('Not enough bullets left')
         throw new bullets_shortage(player.supplies.bullets)
@@ -76,7 +62,6 @@ function consume_bullets(amount) {
 }
 
 function consume_clothes(pair) {
-    check_type_match(pair, "number")
     if (player.supplies.clothes - pair <= 0) {
         throw new clothes_shortage(player.supplies.clothes)
     }
@@ -84,7 +69,6 @@ function consume_clothes(pair) {
 }
 
 function consume_miscellaneous(amount) {
-    check_type_match(amount, 'number')
     if (player.supplies.miscellaneous - amount <= 0) {
         console.log('No clothes left')
         throw new miscellaneous_shortage(player.supplies.miscellaneous)
@@ -93,12 +77,6 @@ function consume_miscellaneous(amount) {
 }
 
 function stock_by_attribute(attribute, amount) {
-    if (typeof (attribute) != 'string')
-        throw new input_type_mismatch_exception('number', typeof amount)
-
-    if (typeof (amount) != 'number')
-        throw new input_type_mismatch_exception('number', typeof amount)
-
     switch (attribute) {
         case 'oxen':
             player.oxen += amount
@@ -122,18 +100,14 @@ function stock_by_attribute(attribute, amount) {
 }
 
 function change_health_condition(category, condition) {
-    if (typeof (category) != 'string' || typeof (condition) != 'string') {
-        throw new input_type_mismatch_exception("string", typeof condition)
-    }
-    else if (category == 'hurt') {
+    if (category == 'hurt') {
         player.health.hurt = condition
     }
     else if (category == 'sick') {
         player.health.sick = condition
     }
     else {
-        console.log('category is: ' + category)
-        throw new health_category_not_found_exception(category)
+        console.log("Health category " + category + " does not match either hurt or sick")
     }
 }
 
