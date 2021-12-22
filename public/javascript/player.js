@@ -18,7 +18,7 @@ function load_player_from_object(info_obj) {
     player.supplies.miscellaneous = parseInt(info_obj.miscellaneous)
     debit(player.oxen + player.supplies.food + player.supplies.bullets 
         + player.supplies.clothes + player.supplies.miscellaneous)
-    //player.rifle_skill = info_obj.rifle_skill
+    player.meal_plan = info_obj.meal_plan
 }
 
 function set_name(new_name) {
