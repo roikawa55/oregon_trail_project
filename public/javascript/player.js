@@ -1,3 +1,4 @@
+import input_type_mismatch_exception from 'exception.js'
 var player = {
     name: 'undefined',
     oxen: 0,
