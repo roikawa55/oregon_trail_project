@@ -2,6 +2,7 @@ var player = {
     name: 'undefined',
     oxen: 0,
     rifle_skill: 1,
+    meal_plan: 1,
     supplies: { food: 0, bullets: 0, clothes: 0, miscellaneous: 0 },
     health: { hurt: "", sick: "" },
     cash: 700,
@@ -10,12 +11,11 @@ var player = {
 
 function load_player_from_object(info_obj) {
     set_name(info_obj.name)
-    player.oxen = info_obj.oxen
-    player.supplies.food = info_obj.food
-    player.supplies.bullets = info_obj.bullets
-    player.supplies.clothes = info_obj.clothes
-    player.supplies.miscellaneous = info_obj.miscellaneous
-    //player.cash = info_obj.cash
+    player.oxen = parseInt(info_obj.oxen)
+    player.supplies.food = parseInt(info_obj.food)
+    player.supplies.bullets = parseInt(info_obj.bullets)
+    player.supplies.clothes = parseInt(info_obj.clothes)
+    player.supplies.miscellaneous = parseInt(info_obj.miscellaneous)
     debit(player.oxen + player.supplies.food + player.supplies.bullets 
         + player.supplies.clothes + player.supplies.miscellaneous)
     //player.rifle_skill = info_obj.rifle_skill
