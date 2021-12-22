@@ -136,10 +136,7 @@ function change_health_condition(category, condition) {
     }
 }
 
-<<<<<<< HEAD
-module.exports.player = player
-module.exports.load_player_from_object = load_player_from_object
-=======
+
 function reduce_total_mileage(lost_mileage){
     player.total_mileage -= lost_mileage
 }
@@ -147,4 +144,6 @@ function reduce_total_mileage(lost_mileage){
 function add_total_mileage(mileage){
     player.total_mileage += mileage
 }
->>>>>>> 247d2584368882b39233519dfa766f0cfdaa3b16
+
+module.exports.player = player
+module.exports.load_player_from_object = load_player_from_object
